@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Ceylon dependencies">
+    <CLASSES>
+      <root url="jar://$APPLICATION_PLUGINS_DIR$/CeylonRuntime/lib/ceylon.language-1.2.3.car!/" />
+      <root url="jar://$PROJECT_DIR$/../ceylon-ide-intellij/plugin-ceylon-code/intellij-repository/com.intellij.openapi-current.jar!/" />
+      <root url="jar://$USER_HOME$/.ceylon/repo/ceylon/html/1.2.3/ceylon.html-1.2.3.car!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

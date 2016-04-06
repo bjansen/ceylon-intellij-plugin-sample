@@ -1,0 +1,10 @@
+
+[compiler]
+source=source
+resource=resource
+
+[repositories]
+remote=flat:../ceylon-ide-intellij/plugin-ceylon-code/intellij-repository
+
+[defaults]
+encoding=UTF-8

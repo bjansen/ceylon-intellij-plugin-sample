@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="CeylonRuntime">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../ceylon-ide-intellij/ant-build/CeylonRuntime/lib/CeylonRuntime.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../ceylon-ide-intellij/ant-build/CeylonRuntime/lib/com.redhat.ceylon.module-resolver-1.2.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

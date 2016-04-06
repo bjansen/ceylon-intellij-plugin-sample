@@ -1,0 +1,45 @@
+<idea-plugin version="2">
+  <id>com.your.company.unique.plugin.id</id>
+  <name>Ceylon Sample</name>
+  <version>1.0</version>
+  <vendor url="https://github.com/bjansen">Bastien Jansen</vendor>
+
+  <description><![CDATA[
+      Simple plugin based on CeylonRuntime.
+    ]]></description>
+
+  <change-notes><![CDATA[
+    ]]>
+  </change-notes>
+
+  <depends>org.intellij.plugins.ceylon.runtime</depends>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <application-components>
+    <component>
+      <!-- This component will register special Ceylon modules (for openapi.jar, util.jar etc)
+           which are likely needed by any IntelliJ plugin, but which are not present in any
+           Ceylon repository. Instead, they point to the actual JARs located in the IntelliJ
+           installation. -->
+      <implementation-class>com.redhat.ceylon.intellij.CeylonPluginInitializer</implementation-class>
+    </component>
+  </application-components>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- This load listener adds lib/*.car to the classpath because by default, IntelliJ
+         only recognizes lib/*.jar. This is needed because things like actions or intentions
+         will be loaded immediately, so if they're written in Ceylon we need to have the
+         classpath ready. -->
+    <ApplicationLoadListener implementation="com.redhat.ceylon.intellij.CeylonPluginInitializer"/>
+  </extensions>
+
+  <actions>
+    <!-- This is a sample action written in Ceylon. -->
+    <action class="com.redhat.ceylon.intellij.runtime.sample.MySampleAction" id="CeylonSample" text="Ceylon action">
+      <add-to-group group-id="CutCopyPasteGroup" anchor="last"/>
+    </action>
+  </actions>
+
+</idea-plugin>
